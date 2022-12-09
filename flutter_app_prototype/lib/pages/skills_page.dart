@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer_menu.dart';
+
 class ListedSkillsPage extends StatelessWidget {
   final List _skills = [
     ['LOGIC', 'Intellect'],
@@ -34,7 +36,7 @@ class ListedSkillsPage extends StatelessWidget {
           centerTitle: true,
           title: const Text('Skills'),
         ),
-        //drawer: DrawerMenu();
+        drawer: DrawerMenu(),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: AnimatedOpacity(
@@ -54,7 +56,7 @@ class ListedSkillsPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
-                                color: Colors.blueGrey,
+                                color: Colors.grey,
                                 blurRadius: 5,
                                 spreadRadius: 0,
                                 offset: Offset(0, 5))

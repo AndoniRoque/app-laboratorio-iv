@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer_menu.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -13,22 +15,13 @@ class HomeScreen extends StatelessWidget {
         elevation: 10,
         centerTitle: true,
       ),
+      drawer: const DrawerMenu(),
       body: SingleChildScrollView(
         child: Center(
             child: Column(children: [
-          const Image(
-              image: NetworkImage(
-                  'https://ia902502.us.archive.org/12/items/metal-gear-solid-3-subsistence-italy-disc-1-subsistence-disc/MV5BZDc1OGUxMzItNWIyYi00ZGExLTllZTItNGFmNWRmMDUyOGU5XkEyXkFqcGdeQXVyODg1MTQ2MDg%40._V1_FMjpg_UX1000_%20-%20Copia.jpg')),
-          const FadeInImage(
-            placeholder: AssetImage('assets/3ypc.gif'),
-            image:
-                NetworkImage('https://images7.alphacoders.com/103/1035943.jpg'),
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: 250,
-          ),
+          Image.asset('assets/images/home_disco_elysium.jpg'),
           Container(
-            color: Colors.lightBlue[50],
+            color: Colors.green,
             margin: const EdgeInsets.all(20),
             padding: const EdgeInsets.all(10),
             height: size.height * 0.085,
