@@ -19,51 +19,48 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
             child: Column(children: [
-          Image.asset('assets/images/home_disco_elysium.jpg'),
           Container(
-            color: Colors.green,
+              decoration: BoxDecoration(
+                  border: Border.all(width: 5.0, color: Colors.blueGrey)),
+              child: Image.asset('assets/images/home_disco_elysium.jpg')),
+          Container(
+            decoration: BoxDecoration(
+                color: const Color.fromRGBO(133, 45, 23, .3),
+                border: Border.all(
+                    width: 2.0, color: const Color.fromRGBO(104, 105, 63, 4))),
             margin: const EdgeInsets.all(20),
             padding: const EdgeInsets.all(10),
-            height: size.height * 0.085,
+            height: size.height * 0.09,
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: const [
-                      Text('Titulo de prueba Principal'),
-                      SizedBox(height: 10),
-                      Text('Subtitulo de prueba'),
+                      Icon(Icons.portrait_rounded),
+                      Text('Harry'),
                     ],
                   ),
-                  const Icon(Icons.star_outline),
-                  const Text('50')
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.psychology_sharp),
+                      Text('Skills'),
+                    ],
+                  )
                 ]),
           ),
           Container(
-            color: Colors.lightBlue[50],
-            margin: const EdgeInsets.symmetric(horizontal: 3),
-            padding: const EdgeInsets.symmetric(vertical: 3),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  children: const [Icon(Icons.phone), Text('CALL')],
-                ),
-                Column(
-                  children: const [Icon(Icons.telegram), Text('Route')],
-                ),
-                Column(
-                  children: const [Icon(Icons.share), Text('Share')],
-                )
-              ],
-            ),
-          ),
-          Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  border: Border.all(width: 3.0, color: Colors.blueGrey)),
               margin: const EdgeInsets.all(20),
               child: const Text(
-                  'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat'))
+                  "Disco Elysium is a 2019 role-playing video game developed and published by ZA/UM.\n\n"
+                  "The game takes place in the seaside district of a fictional city still recovering from the ramifications of a siege decades prior to the game's start. Players take the role of an amnesiac detective who has been tasked with solving a murder mystery. Disco Elysium is a non-traditional role-playing game featuring no combat. Instead, events are resolved through skill checks and dialogue trees via a system of 24 skills that represents different aspects of the protagonist, such as his perception and pain threshold.\n\n"
+                  "Disco Elysium was released for Windows in October 2019 and macOS in April 2020. An expanded version of the game featuring full voice acting and new content, subtitled The Final Cut, was released for consoles in 2021, alongside a free update for the PC and macOS versions."))
         ])),
       ),
     );
