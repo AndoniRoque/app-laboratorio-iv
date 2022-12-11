@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
       routes: {
         'home': (context) => const HomeScreen(),
         'skills': (context) => ListedSkillsPage(),
+        'harry': (context) => const HarryPage(),
       },
     );
   }

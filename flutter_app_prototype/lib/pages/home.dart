@@ -12,7 +12,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Disco Elysium'),
-        elevation: 10,
         centerTitle: true,
       ),
       drawer: const DrawerMenu(),
@@ -21,7 +20,15 @@ class HomeScreen extends StatelessWidget {
             child: Column(children: [
           Container(
               decoration: BoxDecoration(
-                  border: Border.all(width: 5.0, color: Colors.blueGrey)),
+                border: Border.all(width: 5.0, color: Colors.blueGrey),
+                boxShadow: const [
+                  BoxShadow(
+                      color: Color.fromRGBO(71, 195, 161, .3),
+                      blurRadius: 8,
+                      spreadRadius: 2,
+                      offset: Offset(0, 5))
+                ],
+              ),
               child: Image.asset('assets/images/home_disco_elysium.jpg')),
           Container(
             decoration: BoxDecoration(
@@ -31,8 +38,8 @@ class HomeScreen extends StatelessWidget {
             margin: const EdgeInsets.all(20),
             padding: const EdgeInsets.all(10),
             height: size.height * 0.09,
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // Box de icons
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

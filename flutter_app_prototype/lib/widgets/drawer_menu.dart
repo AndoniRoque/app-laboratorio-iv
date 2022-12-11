@@ -31,7 +31,7 @@ class DrawerMenu extends StatelessWidget {
         subtitle: const Text("Harry's skills"),
         leading: const Icon(Icons.adjust),
         onTap: () {
-          Navigator.pushReplacementNamed(context, '/skills');
+          Navigator.pushReplacementNamed(context, 'skills');
         },
       ),
       const Divider(height: 5),
