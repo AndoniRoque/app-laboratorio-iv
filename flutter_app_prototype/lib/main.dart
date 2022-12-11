@@ -27,11 +27,12 @@ class MyApp extends StatelessWidget {
           // floatingActionButtonTheme: const FloatingActionButtonThemeData(
           // backgroundColor: Colors.black, foregroundColor: Colors.white)),
           ),
-      initialRoute: 'home',
+      initialRoute: 'skill',
       routes: {
         'home': (context) => const HomeScreen(),
         'skills': (context) => ListedSkillsPage(),
         'harry': (context) => const HarryPage(),
+        'skill': (context) => const SkillPage(),
       },
     );
   }

@@ -36,7 +36,6 @@ class DrawerMenu extends StatelessWidget {
       ),
       const Divider(height: 5),
     ]));
-    // MaterialApp(title: 'MyApp', home: ListedSkillsPage());
   }
 }
 
@@ -55,11 +54,6 @@ class _DrawerHeader extends StatelessWidget {
               opacity: 0.9)),
       child: Container(
         alignment: Alignment.bottomRight,
-        child: const Text(
-          '[  Menu  ]',
-          style: TextStyle(color: Colors.black, fontSize: 18),
-          textAlign: TextAlign.right,
-        ),
       ),
     );
   }

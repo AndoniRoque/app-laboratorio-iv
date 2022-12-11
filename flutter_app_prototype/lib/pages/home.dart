@@ -32,30 +32,48 @@ class HomeScreen extends StatelessWidget {
               child: Image.asset('assets/images/home_disco_elysium.jpg')),
           Container(
             decoration: BoxDecoration(
-                color: const Color.fromRGBO(133, 45, 23, .3),
-                border: Border.all(
-                    width: 2.0, color: const Color.fromRGBO(104, 105, 63, 4))),
+              color: const Color.fromRGBO(133, 45, 23, .4),
+              border: Border.all(
+                  width: 2.0, color: const Color.fromRGBO(104, 105, 63, 4)),
+              boxShadow: const [
+                BoxShadow(
+                    color: Color.fromRGBO(71, 195, 161, .1),
+                    blurRadius: 8,
+                    spreadRadius: 2,
+                    offset: Offset(0, 5))
+              ],
+            ),
             margin: const EdgeInsets.all(20),
             padding: const EdgeInsets.all(10),
             height: size.height * 0.09,
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 // Box de icons
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.portrait_rounded),
-                      Text('Harry'),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, 'harry');
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Icon(Icons.portrait_rounded),
+                        Text('Harry'),
+                      ],
+                    ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.psychology_sharp),
-                      Text('Skills'),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, 'skills');
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Icon(Icons.psychology_sharp),
+                        Text('Skills'),
+                      ],
+                    ),
                   )
                 ]),
           ),

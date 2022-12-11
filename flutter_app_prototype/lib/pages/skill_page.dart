@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_prototype/widgets/drawer_menu.dart';
 
 class SkillPage extends StatelessWidget {
   const SkillPage({super.key});
@@ -10,48 +11,35 @@ class SkillPage extends StatelessWidget {
           title: const Text('Skill'),
           centerTitle: true,
         ),
-        body: Card(
-          child: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/portrait_logic.webp'),
-                fit: BoxFit.fitWidth,
-                alignment: Alignment.center,
+        drawer: const DrawerMenu(),
+        body: ListView(
+          children: [
+            const Card(
+              elevation: 20,
+              child: ListTile(
+                title: Text(
+                    style: TextStyle(
+                      fontFamily: 'changa',
+                      fontSize: 30,
+                    ),
+                    'Logic'),
               ),
             ),
-          ),
-        )
-        // body: ListView(
-        //   children: [
-        //     Padding(
-        //       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-        //       child: Card(
-        //         elevation: 10,
-        //         child: Column(
-        //           children: [
-        //             const ListTile(
-        //               leading: Icon(Icons.image),
-        //               title: Text('Titulo de nuestra Card'),
-        //               subtitle: Text(
-        //                   'lahwlfajj jjawjeofi lkjdvc,vmnfde aeioijdsf pfoaef; aodjif h.oaewfjehkdf  po eawri ja a ud y ywf iu jnfa er  djñaoigjklerñiodf sppo f. Cjhfañwlofijdfjhfhhdfdiosfdp .'),
-        //             ),
-        //             Row(
-        //               children: [
-        //                 TextButton(
-        //                     onPressed: () {}, child: const Text('Aceptar')),
-        //                 const SizedBox(
-        //                   width: 5,
-        //                 ),
-        //                 ElevatedButton(
-        //                     onPressed: () {}, child: const Text('Cancelar'))
-        //               ],
-        //             )
-        //           ],
-        //         ),
-        //       ),
-        //     )
-        //   ],
-        // ),
-        );
+            Card(elevation: 10, child: Image.asset('assets/images/0.webp')),
+            const Card(
+                elevation: 1,
+                child: ListTile(
+                    title: Text(
+                        style: TextStyle(fontFamily: 'cardo', fontSize: 22),
+                        'Description'),
+                    subtitle: Text(
+                        style: TextStyle(fontFamily: 'cardo', fontSize: 20),
+                        "\n\n"
+                        "Wield raw intellectual power. Deduce the world.\n\n"
+                        "Cool for: Analysts, Pure Rationalists, Obviously Logicians.\n\n"
+                        "Logic urges you to analyze the living daylights out of the case. It enables you to piece evidence together, detect inconsistencies in statements, and impress everyone with your astonishing conclusions. It's the bread and butter of many a detective.\n\n"
+                        "At high levels, Logic will be able to solve even the most complicated puzzle. You will be very proud and thus susceptible to intellectual flattery; for those blinded by their own brilliance often miss important clues. With low levels of Logic, you’re going to have a hard time solving even the simplest puzzles. Even if you find the pieces, good luck putting them together.\n\n")))
+          ],
+        ));
   }
 }
