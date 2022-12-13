@@ -53,7 +53,7 @@ class _DrawerHeader extends StatelessWidget {
               fit: BoxFit.contain,
               opacity: 0.9)),
       child: Container(
-        alignment: Alignment.bottomRight,
+        alignment: Alignment.bottomLeft,
       ),
     );
   }

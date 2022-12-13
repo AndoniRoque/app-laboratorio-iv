@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/drawer_menu.dart';
+import 'package:flutter_app_prototype/widgets/widgets.dart';
 
 class HarryPage extends StatelessWidget {
   const HarryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    //final size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(
@@ -18,18 +17,19 @@ class HarryPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
             child: Column(children: [
-          Container(
-              decoration: BoxDecoration(
-                border: Border.all(width: 5.0, color: Colors.blueGrey),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Color.fromRGBO(71, 195, 161, .3),
-                      blurRadius: 8,
-                      spreadRadius: 2,
-                      offset: Offset(0, 5))
-                ],
-              ),
-              child: Image.asset('assets/images/harry.webp')),
+          const Portrait(urlImage: 'assets/images/harry.webp'),
+          // Container(
+          //     decoration: BoxDecoration(
+          //       border: Border.all(width: 5.0, color: Colors.blueGrey),
+          //       boxShadow: const [
+          //         BoxShadow(
+          //             color: Color.fromRGBO(71, 195, 161, .3),
+          //             blurRadius: 8,
+          //             spreadRadius: 2,
+          //             offset: Offset(0, 5))
+          //       ],
+          //     ),
+          //     child: Image.asset('assets/images/harry.webp')),
           Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(

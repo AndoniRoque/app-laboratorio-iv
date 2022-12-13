@@ -13,24 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MyApp',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-          // primaryColor: Colors.black,
-          // appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
-          // elevatedButtonTheme: ElevatedButtonThemeData(
-          // style: TextButton.styleFrom(
-          // backgroundColor: Colors.black,
-          // foregroundColor: Colors.black)),
-          // textButtonTheme: TextButtonThemeData(
-          // style: TextButton.styleFrom(
-          // backgroundColor: Colors.black,
-          // foregroundColor: Colors.black)),
-          // floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          // backgroundColor: Colors.black, foregroundColor: Colors.white)),
-          ),
-      initialRoute: 'skill',
+      theme: ThemeData.dark()
+          .copyWith(backgroundColor: const Color.fromRGBO(100, 0, 0, 0)),
+      initialRoute: 'home',
       routes: {
         'home': (context) => const HomeScreen(),
-        'skills': (context) => ListedSkillsPage(),
+        'skills': (context) => const ListedSkillsPage(),
         'harry': (context) => const HarryPage(),
         'skill': (context) => const SkillPage(),
       },
