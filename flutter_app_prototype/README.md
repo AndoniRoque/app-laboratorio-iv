@@ -1,16 +1,12 @@
-# flutter_app_prototype
+# Las habilidades de Disco Elysium.
+## Flutter prototype app - Laboratorio de Computación IV. 
 
-A new Flutter project.
+Esta aplicación esta basada en el videojuego Disco Elysium (2019 - ZA/UM studio), un juego independiente de rol donde los jugadores asumen el papel de un detective con amnesia encargado de resolver un asesinato en medio de un conflicto politico e intentar recordar quién es. A su disposición hay 24 habilidades especiales que ayudarán (o tal vez no...) en el camino identificadas como parte de la psiquis del protagonista. 
 
-## Getting Started
+La app cuenta con una pagina principal con la portada del juego y una breve descripción. 
+Una pantalla para introducir al personaje jugable. 
+Un listado de las 24 habilidades del jugador.
+Se puede "clickear" cualquiera de esas 25 habilidades y se abrirá otra pantalla con una descripción de la habilidad seleccionada. 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Toda la información fue seleccionada de la Wiki del juego: https://discoelysium.fandom.com/wiki/Disco_Elysium_Wiki
+La app fue emulada en un smartphone Pixel 4 API 29.
