@@ -10,7 +10,7 @@ class ListedSkillsPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Skills'),
+          title: const Text('Skills', style: TextStyle(fontSize: 30)),
         ),
         drawer: const DrawerMenu(),
         body: Padding(
@@ -41,7 +41,7 @@ class ListedSkillsPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: [
                               BoxShadow(
-                                  color: Colors.red.shade700,
+                                  color: Color.fromARGB(255, 172, 71, 17),
                                   blurRadius: 1,
                                   spreadRadius: 0,
                                   offset: const Offset(0, 3))
@@ -57,11 +57,13 @@ class ListedSkillsPage extends StatelessWidget {
                                   children: [
                                     Text(Info.skillList[index][1],
                                         style: const TextStyle(
-                                            color: Colors.white, fontSize: 18)),
+                                            color: Colors.white,
+                                            fontSize: 22,
+                                            fontFamily: 'changa')),
                                     Text(
                                         "Category: ${Info.skillList[index][2]}",
                                         style: const TextStyle(
-                                            color: Colors.white, fontSize: 14)),
+                                            color: Colors.white, fontSize: 18)),
                                   ],
                                 ),
                               ),
@@ -69,7 +71,9 @@ class ListedSkillsPage extends StatelessWidget {
                                 child: Container(
                                     decoration: BoxDecoration(
                                         border: Border.all(
-                                            width: 1.8, color: Colors.red)),
+                                            width: 1.8,
+                                            color: const Color.fromARGB(
+                                                255, 172, 71, 17))),
                                     child: Image.asset(
                                         'assets/images/$index.webp')),
                               )

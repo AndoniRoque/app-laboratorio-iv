@@ -8,6 +8,7 @@ class DrawerMenu extends StatelessWidget {
     return Drawer(
         child: ListView(padding: EdgeInsets.zero, children: [
       const _DrawerHeader(),
+      const Divider(height: 15),
       ListTile(
         title: const Text('Disco Elysium'),
         subtitle: const Text('Home page'),
@@ -16,7 +17,7 @@ class DrawerMenu extends StatelessWidget {
           Navigator.pushReplacementNamed(context, 'home');
         },
       ),
-      const Divider(height: 5),
+      const Divider(height: 15),
       ListTile(
         title: const Text('Harrier Du Bois'),
         subtitle: const Text("Disco Elysium's playable character"),
@@ -25,7 +26,7 @@ class DrawerMenu extends StatelessWidget {
           Navigator.pushReplacementNamed(context, 'harry');
         },
       ),
-      const Divider(height: 5),
+      const Divider(height: 15),
       ListTile(
         title: const Text('Skills'),
         subtitle: const Text("Harry's skills"),
@@ -34,7 +35,7 @@ class DrawerMenu extends StatelessWidget {
           Navigator.pushReplacementNamed(context, 'skills');
         },
       ),
-      const Divider(height: 5),
+      const Divider(height: 15),
     ]));
   }
 }
@@ -50,7 +51,7 @@ class _DrawerHeader extends StatelessWidget {
       decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/disco_elysium-logo.png'),
-              fit: BoxFit.contain,
+              fit: BoxFit.fitWidth,
               opacity: 0.9)),
       child: Container(
         alignment: Alignment.bottomLeft,

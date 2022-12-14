@@ -12,7 +12,7 @@ class SkillPage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Skill'),
+          title: const Text('Skill', style: TextStyle(fontSize: 30)),
           centerTitle: true,
         ),
         drawer: const DrawerMenu(),

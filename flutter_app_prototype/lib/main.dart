@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_prototype/pages/pages.dart';
+import 'package:flutter_app_prototype/themes/default_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MyApp',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark()
-          .copyWith(backgroundColor: const Color.fromRGBO(100, 0, 0, 0)),
+      theme: DefaultTheme.defaultTheme,
       initialRoute: 'home',
       routes: {
         'home': (context) => const HomeScreen(),
